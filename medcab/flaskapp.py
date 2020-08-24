@@ -1,5 +1,5 @@
 from os import getenv
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify, redirect
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 from .model import db
@@ -28,7 +28,7 @@ def create_app():
     @app.route('/test', methods=['POST', 'GET'])
     def predict_strain():
         text = request.get_json(force=True)
-        # One we know the name of dspt5 name of model, replace predict on line 32 and import from their file
+        # Once we know the name of dspt5 name of model, replace predict on line 32 and import from their file
         predictions = predict(text)
         return jsonify(predictions)
 
