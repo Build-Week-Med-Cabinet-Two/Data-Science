@@ -11,6 +11,8 @@ scikit-learn = "*"
 pandas = "*"
 psycopg2 = "*"
 jsonify = "*"
+flask-cors = "*"
+spacy = "*"
 
 [dev-packages]
 
