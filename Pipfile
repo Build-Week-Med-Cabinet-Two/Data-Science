@@ -9,6 +9,8 @@ flask-sqlalchemy = "*"
 python-dotenv = "*"
 scikit-learn = "*"
 pandas = "*"
+psycopg2 = "*"
+jsonify = "*"
 
 [dev-packages]
 
