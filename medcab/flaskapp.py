@@ -80,7 +80,7 @@ def create_app():
         return 'WELCOME TO OUR MEDICINE CABINET!!'
 
     # Route for predictions:
-    @app.route('/test', methods=['POST', 'GET'])
+    @app.route('/predict_strain', methods=['POST', 'GET'])
     def predict_strain():
         """Page that will load the user's recommendation"""
         data = request.get_json(force=True)
