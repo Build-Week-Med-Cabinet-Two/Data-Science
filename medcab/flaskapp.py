@@ -89,9 +89,8 @@ def create_app():
     @app.route('/test', methods=['POST', 'GET'])
     def predict_strain():
         """Page that will load the user's recommendation"""
-        text = request.get_json(force=True)
-        #text = "My back hurts, and I can't get to sleep." # <---- this is a test string
-        predictions = predict(text)
+        data = request.get_json(force=True)
+        predictions = predict(data['input'])
         return jsonify(predictions)
 
     return app
