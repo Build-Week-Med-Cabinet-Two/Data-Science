@@ -13,6 +13,8 @@ psycopg2 = "*"
 jsonify = "*"
 flask-cors = "*"
 spacy = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
