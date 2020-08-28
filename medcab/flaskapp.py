@@ -17,19 +17,14 @@ from spacy.tokenizer import Tokenizer
 
 
 # changed from relative to to full path
-#strains = pd.read_csv("https://github.com/Build-Week-Med-Cabinet-Two/Data-Science/blob/master/cannabis.csv")
-#strains = pd.read_csv(r"C:\Users\kushnap\Desktop\Data-Science\cannabis.csv")
 strains = pd.read_csv("https://raw.githubusercontent.com/Build-Week-Med-Cabinet-3/Data-Science/master/API/nn_model_strains.csv")
 
 nlp=English()
-#nlp = spacy.load('en_core_web_sm')
 tokenizer = Tokenizer(nlp.vocab)
-#my_words = ['unavailable', 'unknown', 'profile', 'currently',',','$']
-#my_stop_words = nlp.Defaults.stop_words.union(my_words)
 tf = TfidfVectorizer(stop_words="english")
 transformer = TfidfVectorizer(stop_words="english", min_df=0.025, max_df=0.98, ngram_range=(1,3))
 
-#dtm = transformer.fit_transform(strains["total_text"])
+
 dtm = transformer.fit_transform(strains['lemmas'])
 dtm = pd.DataFrame(dtm.todense(), columns=transformer.get_feature_names())
 
@@ -44,7 +39,6 @@ def predict(request_text):
     output_array = []
     for recommendation in recommendations:
         strain = strains.iloc[recommendation]
-        #output = strain.drop(['spaCy_tokens', 'total_text']).to_dict()
         output = strain.drop(['Unnamed: 0', 'name', 'ailment', 'all_text', 'lemmas']).to_dict()
         output_array.append(output)
         print('output_array')
