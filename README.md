@@ -11,7 +11,7 @@ The DS Unit 4 team was responsible for the predictive model used in this app.
 
 ### Using pipenv:
 Within a CLI, clone the repository -> git clone https://github.com/CurdtMillion/Data-Science.git<br> 
-Once the repo is saved to your local machine, navigate to the correct directory -> cd data-science<br>  
+Once the repo is saved to your local machine, navigate to the correct directory -> cd data-science<br>
 Create a pip environment with your CLI using Python 3.7 -> pipenv --python 3.7<br> 
 Install requried dependencies -> pipenv install [dependency name here]<br> 
 Activate the shell -> pipenv shell
