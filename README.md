@@ -10,11 +10,11 @@ The DS Unit 4 team was responsible for the predictive model used in this app.
 ## How to install and run:
 
 ### Using pipenv:
-**1** Within a CLI, clone the repository -> git clone https://github.com/CurdtMillion/Data-Science.git<br> 
-**2** Once the repo is saved to your local machine, navigate to the correct directory -> cd data-science<br>
-**3** Create a pip environment with your CLI using Python 3.7 -> pipenv --python 3.7<br> 
-**4** Install requried dependencies -> pipenv install [dependency name here]<br> 
-**5** Activate the shell -> pipenv shell
+**1.** Within a CLI, clone the repository -> git clone https://github.com/CurdtMillion/Data-Science.git<br> 
+**2.** Once the repo is saved to your local machine, navigate to the correct directory -> cd data-science<br>
+**3.** Create a pip environment with your CLI using Python 3.7 -> pipenv --python 3.7<br> 
+**4.** Install requried dependencies -> pipenv install [dependency name here]<br> 
+**5.** Activate the shell -> pipenv shell
 
 ### Run
 $ gunicorn -w 4 medcab:APP -t 300
