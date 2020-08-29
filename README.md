@@ -1,9 +1,20 @@
+![Imgur](https://i.imgur.com/Lp5ehld.png)
 ### What is Med Cabinet?
 
 Med Cabinet is an app for people who are new to using cannabis as a way to curtail certain medical conditions
 and ailments.  This app will help patients find the right strain for them, and give a description of the strain as well as 
-the effects, flavor and type. This app was built using Flask, as well as a PostgreSQL database hosted on ElephantSQL.  
-My team was asked to build the Flask app and the Postgres database. The DS team in Unit 4 was responsible for the model 
-used in this app.
+the effects, flavor and type. MedCabinet will suggest 10 strains based on user input. This app was built using Flask, as well 
+as a PostgreSQL database hosted on ElephantSQL. My team (DS Unit 3) was asked to build the Flask app and the Postgres database. 
+The DS Unit 4 team was responsible for the predictive model used in this app.
 
+### How to install and run:
 
+# Using pipenv:
+Within a CLI, clone the repository -> git clone https://github.com/CurdtMillion/Data-Science.git
+Once the repo is saved to your local machine, navigate to the correct directory -> cd data-science 
+Create a pip environment with your CLI using Python 3.7 -> pipenv --python 3.7
+Install requried dependencies -> pipenv install [dependency name here]
+Activate the shell -> pipenv shell
+
+# Run
+$ gunicorn -w 4 medcab:APP -t 300
